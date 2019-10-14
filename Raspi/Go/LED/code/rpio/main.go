@@ -21,8 +21,6 @@ func reset() {
 }
 
 func flashLed() {
-	// fmt.Println("opening GPIO")
-
 	err := rpio.Open()
 	if err != nil {
 		fmt.Println("unable to open gpio")
@@ -57,26 +55,6 @@ keyPressListenerLoop:
 				pin.Low()
 				currentState := pin.Read()
 				fmt.Printf("\nLED pin set to %d - (LOW)", currentState)
-			// case term.KeySpace:
-			// 	reset()
-			// 	state = !state
-			// 	for state {
-			// 		pin.Toggle()
-			// 		time.Sleep(time.Millisecond * 1000)
-			// 		fmt.Printf("DEBUG: %d", pin.Read())
-			// 		fmt.Println(state)
-			// 		switch ev.Type {
-			// 		case term.EventKey:
-			// 			switch ev.Key {
-			// 			case term.KeyArrowDown:
-			// 				state = false
-			// 				fmt.Println(state)
-			// 			}
-			// 		}
-			// if !state {
-			// 	break
-			// }
-			// }
 			default:
 				// we only want to read a single character or one key pressed event
 				reset()
