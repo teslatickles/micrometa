@@ -19,28 +19,33 @@ to control turning an LED On or Off, respectively.
    **DON"T FORGET YOU NEED A RESISTOR TO LIMIT THE CURRENT GOING THROUGH THE RESISTOR!**
 
    - Clone this repo: `git clone [location of this repo]` in terminal/command line.
-
+   
+   - You will probably be required to download two packages referenced in the main.go file:
+   
+     On command line, enter ``go get "github.com/nsf/termbox-go" && go get "github.com/stianeikeland/go-rpio"``
+   
+     This will download termbox, which allows for detecting keyboard events, and, rpio, which allows controlling      Raspi GPIO (General Purpose Input Output) pins. 
+   
    - Build an executable binary file using this command:
 
-    ```env GOOS=linux GOARCH=arm GOARM=5 build```
+    env GOOS=linux GOARCH=arm GOARM=5 build
 
    - this means using linux operating system, on raspi 3, which means ARM architecture and 5 designates for Raspi **3**
 
    - scp the binary file to target Raspberry Pi 3 (make sure Raspi is booted up and has internet connection):
 
-  ``scp rpio pi@[pi's ip address here]:/home/pi/[name you want executable to be on pi]``
+    scp rpio pi@[pi's ip address here]:/home/pi/[name you want executable to be on pi]
 
-    You will be prompted to enter the password for your Raspi.
+   *You will be prompted to enter the password for your Raspi.*
 
-    *Note: you can find your pi's ip by typing `ifconfig` in terminal*
+   *Note: you can find your pi's ip by typing `ifconfig` in terminal*
 
    - Now, we need to run the executable on the Raspi:
 
-    *You can either ssh into the pi from another computer or boot up the Raspberry Pi, then double-click the executable file found at /home/pi/ and select
-    `Run from terminal`.*
+*You can either ssh into the pi from another computer or boot up the Raspberry Pi, then double-click the executable file found at /home/pi/ and select Execute From Terminal*
 
    - Now, try pressing Up arrow key and Down arrow key to see the LED turn On and Off, respectively!
 
-    Thanks for checking this out,
+   Thanks for checking this out,
 
-    - Hunter Hartline (teslatickles)
+   - Hunter Hartline (teslatickles)
