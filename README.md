@@ -1,5 +1,5 @@
-# micrometa
-**A Global Repository for all things hobby electronics and code (repo to collect all examples of Arduino/Raspberry Pi/etc fun)**
+# micrometa - amazing repo
+**A Global Repository for all who have hobby in electronics and coding (repo to collect all examples of Arduino/Raspberry Pi/etc for fun)**
 
 **Contributing**
 
